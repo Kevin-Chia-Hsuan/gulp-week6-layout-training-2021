@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="https://i.ibb.co/rGkXFKY/49627-ticket-tix-icon.png" />
+  <!--↑載入網頁左上角小圖示-->
+  <meta name="description" content="網頁切版直播班-week6" />
+  <!--↑網站描述文字-->
+  <meta name="keywords" content="六角week6訂票網站" />
+  <!--↑網站關鍵字-->
+  <title>
+    展覽詳細頁
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <!-- ↑載入Google Font -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet" />
+  <!--↑載入Material Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- ↑載入swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- ↑載入AOS -->
+  <link rel="stylesheet" href="./assets/style/all.css" />
+</head>
+
+<body>
+  <div class="wrap over-x">
+    <!-- 平板以下nav選單 -->
+    <ul class="nav-md-menu md-menu list-unstyled border border-primary mb-0">
+      <li>
+        <a href="#" class="text-xl text-md-base text-primary fw-bold py-4" data-bs-toggle="modal"
+          data-bs-target="#logInModal">Sign in</a>
+      </li>
+      <li>
+        <a href="#" class="text-xl text-md-base text-primary fw-bold py-4" data-bs-toggle="modal"
+          data-bs-target="#logUpModal">Sign up</a>
+      </li>
+      <li></li>
+    </ul>
+    <!-- 平板以上nav選單 -->
+    <nav class="position-relative border border-primary">
+      <a href="index.html" class="nav-logo position-absolute py-7">
+        <h1 class="text-md-l text-lg text-success">EXHIBINECTION</h1>
+      </a>
+      <div class="
+            nav-list
+            d-flex
+            justify-content-md-end justify-content-between
+            align-items-center
+            px-7 px-lg-12 px-xl-15
+          ">
+        <div class="d-md-none">
+          <a href="#" class="showMenu"><i class="fas fa-bars fa-2x"></i> </a>
+        </div>
+        <ul class="
+              nav-menu
+              d-flex
+              justify-content-end
+              align-items-center
+              list-unstyled
+              py-7
+              mb-0
+            ">
+          <li>
+            <a href="#" class="text-base text-primary d-none d-md-block" data-bs-toggle="modal"
+              data-bs-target="#logInModal">Sign in</a>
+          </li>
+          <li>
+            <a href="#" class="text-base text-primary ms-8 d-none d-md-block" data-bs-toggle="modal"
+              data-bs-target="#logUpModal">Sign up</a>
+          </li>
+          <li>
+            <a href="#" class="d-bolck ms-8 cart-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"><img src="./assets/images/confirmation_number_black_24dp.svg" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h3 id="offcanvasRightLabel" class="text-2xl text-light">
+          Cart List
+        </h3>
+        <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled mb-0">
+          <li class="bg-light rounded pb-3">
+            <button type="button" class="btn-close btn-close-block pt-1 ps-1" aria-label="Close"></button>
+            <div class="
+                  d-flex
+                  justify-content-around
+                  align-items-center
+                  px-md-8 px-4
+                  pb-2 pb-md-3
+                ">
+              <img src="./assets/images/alina-grubnyak-R84Oy89aNKs-unsplash.jpg" class="img-top" alt="..." />
+              <div class="contant">
+                <h5 class="text-base">2020 台味設計展</h5>
+                <h5 class="text-base">01 JUN — 31 OCT</h5>
+                <p class="text-base text-primary mb-0 mb-md-3">全票</p>
+                <h4 class="text-m">NT$350</h4>
+              </div>
+              <div class="
+                    d-flex
+                    flex-column flex-md-row
+                    justify-content-between
+                    align-items-center
+                  ">
+                <a href="#">
+                  <img src="./assets/images/add_black_24dp.svg" alt="" />
+                </a>
+                <h2 class="text-m px-md-3">01</h2>
+                <a href="#"><img src="./assets/images/remove_black_24dp.svg" alt="" /></a>
+              </div>
+            </div>
+          </li>
+          <li class="bg-light rounded pb-3 mt-3">
+            <button type="button" class="btn-close btn-close-block pt-1 ps-1" aria-label="Close"></button>
+            <div class="
+                  d-flex
+                  justify-content-around
+                  align-items-center
+                  px-md-8 px-4
+                  pb-2 pb-md-3
+                ">
+              <img src="./assets/images/michel-catalisano--a0D9LpcKV8-unsplash.jpg" class="img-top" alt="..." />
+              <div class="contant">
+                <h5 class="text-base">2020 台味設計展</h5>
+                <h5 class="text-base">01 JUN — 31 OCT</h5>
+                <p class="text-base text-primary mb-0 mb-md-3">全票</p>
+                <h4 class="text-m">NT$350</h4>
+              </div>
+              <div class="
+                    d-flex
+                    flex-column flex-md-row
+                    justify-content-between
+                    align-items-center
+                  ">
+                <a href="#">
+                  <img src="./assets/images/add_black_24dp.svg" alt="" />
+                </a>
+                <h2 class="text-m px-md-3">01</h2>
+                <a href="#"><img src="./assets/images/remove_black_24dp.svg" alt="" /></a>
+              </div>
+            </div>
+          </li>
+          <li class="bg-light rounded pb-3 mt-3">
+            <button type="button" class="btn-close btn-close-block pt-1 ps-1" aria-label="Close"></button>
+            <div class="
+                  d-flex
+                  justify-content-around
+                  align-items-center
+                  px-md-8 px-4
+                  pb-2 pb-md-3
+                ">
+              <img src="./assets/images/moralis-tsai-8xsktFRw28I-unsplash.jpg" class="img-top" alt="..." />
+              <div class="contant">
+                <h5 class="text-base">2020 台味設計展</h5>
+                <h5 class="text-base">01 JUN — 31 OCT</h5>
+                <p class="text-base text-primary mb-0 mb-md-3">全票</p>
+                <h4 class="text-m">NT$350</h4>
+              </div>
+              <div class="
+                    d-flex
+                    flex-column flex-md-row
+                    justify-content-between
+                    align-items-center
+                  ">
+                <a href="#">
+                  <img src="./assets/images/add_black_24dp.svg" alt="" />
+                </a>
+                <h2 class="text-m px-md-3">01</h2>
+                <a href="#"><img src="./assets/images/remove_black_24dp.svg" alt="" /></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="offcanvas-footer p-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex">
+            <h5 class="text-m text-light me-6">小計</h5>
+            <p class="text-m text-light mb-0">NT$1050</p>
+          </div>
+          <a href="checkout-1.html" class="btn btn-light btn-outline-success px-6 py-3">前往結帳</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- logInModal -->
+    <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border border-warning border-5 rounded">
+          <div class="modal-header">
+            <h3 class="modal-title text-success" id="exampleModalLabel">
+              Sign In 登入
+            </h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column py-10">
+            <div class="mt3">
+              <label for="exampleInputEmail1" class="form-label">帳號</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@gmail.com" />
+              <div id="emailHelp" class="form-text text-ms text-success text-end mt-1">
+                請輸入電子信箱
+              </div>
+            </div>
+            <div class="mt-3">
+              <label for="exampleInputPassword1" class="form-label">密碼</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="**********" />
+              <div id="passwordHelp" class="form-text text-ms text-success text-end mt-1">
+                請輸入密碼
+              </div>
+            </div>
+            <a href="javascript:;" class="text-base text-warning mt-8">忘記密碼</a>
+            <a href="javascript:;" class="text-lg btn btn-warning mt-3">登入</a>
+            <div class="d-flex justify-content-center mt-3">
+              <p class="text-base text-primary mb-0">還沒有帳號嗎？</p>
+              <a href="#" class="text-base text-success" data-bs-toggle="modal" data-bs-target="#logUpModal"
+                data-bs-dismiss="modal">來註冊帳號吧！</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- logUpModal -->
+    <div class="modal fade" id="logUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border border-warning border-5 rounded">
+          <div class="modal-header">
+            <h3 class="modal-title text-success" id="exampleModalLabel">
+              Sign Up 註冊
+            </h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column py-10">
+            <div class="mt3">
+              <label for="exampleInputName1" class="form-label">帳號</label>
+              <input type="text" class="form-control" id="exampleInputName1" placeholder="王大明" />
+              <div id="nameHelp" class="form-text text-ms text-success text-end mt-1">
+                請輸入姓名
+              </div>
+            </div>
+            <div class="mt-3">
+              <label for="exampleInputEmail2" class="form-label">電子郵件</label>
+              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="example@gmail.com" />
+              <div id="EmailHelp" class="form-text text-ms text-success text-end mt-1">
+                請輸入電子郵件
+              </div>
+            </div>
+            <div class="mt-3">
+              <label for="exampleInputPhone1" class="form-label">手機</label>
+              <input type="phone" class="form-control" id="exampleInputPhone1" placeholder="09XXXXXXXX" />
+              <div id="PhoneHelp" class="form-text text-ms text-success text-end mt-1">
+                請輸入手機號碼
+              </div>
+            </div>
+            <div class="mt-3">
+              <label for="exampleInputPassword2" class="form-label">密碼</label>
+              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="**********" />
+              <div id="passwordHelp" class="form-text text-ms text-success text-end mt-1">
+                請輸入密碼
+              </div>
+            </div>
+            <a href="javascript:;" class="text-lg btn btn-warning mt-8">註冊</a>
+            <div class="d-flex justify-content-center mt-3">
+              <p class="text-base text-primary mb-0">已經有帳號了？</p>
+              <a href="" class="text-base text-success" data-bs-toggle="modal" data-bs-target="#logInModal"
+                data-bs-dismiss="modal">登入！</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+<section>
+  <ul
+    class="
+      menu
+      border border-dark
+      list-unstyled
+      d-flex
+      justify-content-md-center
+      mb-0
+    "
+  >
+    <li><a href="#" class="text-base px-4 py-4">音樂</a></li>
+    <li><a href="#" class="text-base px-4 py-4">戲劇</a></li>
+    <li><a href="design.html" class="text-base px-4 py-4">設計</a></li>
+    <li><a href="#" class="text-base px-4 py-4">藝術</a></li>
+    <li><a href="#" class="text-base px-4 py-4">美食</a></li>
+    <li><a href="#" class="text-base px-4 py-4">旅遊</a></li>
+    <li><a href="#" class="text-base px-4 py-4">電影</a></li>
+    <li><a href="#" class="text-base px-4 py-4">親子</a></li>
+    <li><a href="#" class="text-base px-4 py-4">期間限定</a></li>
+  </ul>
+</section>
+<section>
+  <div class="container pt-11 pb-10 pt-md-15 pb-md-14">
+    <div class="row" data-aos="fade-up" data-aos-duration="500">
+      <div class="col-12 col-md-6">
+        <div class="card border-0">
+          <div class="position-relative">
+            <img
+              src="./assets/images/alina-grubnyak-R84Oy89aNKs-unsplash.jpg"
+              class="card-img-top detail-exhibition-img"
+              alt="..."
+            />
+            <div
+              class="
+                card-time-detail
+                position-absolute
+                bottom-0
+                end-0
+                translate-middle
+                d-none d-md-block
+              "
+            >
+              <h4 class="text-m text-light">
+                01 JUN | <br />
+                31 OCT
+              </h4>
+            </div>
+          </div>
+          <div class="card-body">
+            <div
+              class="
+                card-title
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <div class="d-flex">
+                <h4 class="text-m fw-bold me-3">2020 台味設計展</h4>
+                <img
+                  width="24px"
+                  src="./assets/images/facebook-circular-logo.svg"
+                  alt=""
+                  class=""
+                />
+              </div>
+              <h5 class="text-base text-dark d-block d-md-none">
+                01 JUN | 31 OCT
+              </h5>
+            </div>
+            <p class="card-text text-base text-dark text-md-primary mb-0">
+              一年一度的台味設計展由經濟部工業局主辦、台灣創意設計中心執行，每年，針對在地生活、文化及產業發展特色，運用設計思考詮釋新時代的意涵，並以展覽呈現在地設計。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="row align-items-center h-100">
+          <div class="col-12">
+            <div class="row">
+              <div
+                class="
+                  col-12 col-md-6
+                  d-flex
+                  flex-column
+                  align-items-center
+                  mb-10 mb-md-0
+                  border-md-end
+                "
+              >
+                <div class="d-flex justify-content-around w-md-100 w-50">
+                  <img src="./assets/images/remove_black_24dp.svg" alt="" />
+                  <h2 class="text-4xl mb-md-6">01</h2>
+                  <img src="./assets/images/add_black_24dp.svg" alt="" />
+                </div>
+                <div>
+                  <p class="mb-0">張</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 d-flex flex-column mb-10 mb-md-0">
+                <h2 class="text-4xl text-center mb-md-6">NT$350</h2>
+                <div>
+                  <p class="mb-0"></p>
+                  <ul
+                    class="
+                      detail-list
+                      list-unstyled
+                      d-flex
+                      justify-content-center
+                    "
+                  >
+                    <li class="position-relative">
+                      <a href="#" class="text-base text-dark px-lg-3 p-2"
+                        >學生</a
+                      >
+                    </li>
+                    <li class="position-relative">
+                      <a
+                        href="#"
+                        class="text-base text-dark px-lg-3 p-2 detail-active"
+                        >全票</a
+                      >
+                    </li>
+                    <li class="position-relative">
+                      <a href="#" class="text-base text-dark px-lg-3 p-2"
+                        >愛心</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-6 detail-btn">
+                <a href="#" class="btn btn-warning collect py-3 w-100"
+                  >收藏展覽</a
+                >
+              </div>
+              <div class="col-6">
+                <a
+                  href="detail.html"
+                  class="btn btn-outline-warning buyTicket py-3 w-100"
+                  >購買票券</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row" data-aos="zoom-out-up" data-aos-duration="500">
+      <div class="col-12 mb-4 mb-md-8">
+        <div class="bg-detail"></div>
+      </div>
+      <div class="col-12 col-md-4">
+        <img
+          class="img-fluid detail-art-img"
+          src="./assets/images/ricardo-gomez-angel-j5gCOKZdm6I-unsplash.jpg"
+          alt=""
+        />
+      </div>
+      <div class="col-12 col-md-8 order-first order-md-0">
+        <h5 class="text-m sw-bold">藝饗宴</h5>
+        <h5 class="text-m sw-bold mt-1">​Celebration of Style and Art</h5>
+        <p class="text-base text-dark text-md-primary mt-3">
+          匯集美、日、臺等地的藝術家與時尚設計師的作品。以跨界跨域的潮流文化為軸心，結合街頭塗鴉、時尚文化、名牌符號等，藉由各自特殊的表現語彙，傳達對社會當下流行文化的自我反嘲。然而這些深受大眾喜愛的藝術家，也讓「時尚」的概念不再扁平單一，相反的，他們展現了對社會更具魅力的反思，也提出了對於潮文化的自我觀點。
+        </p>
+        <p class="text-base text-dark text-md-primary mt-4">
+          從臺灣前輩藝術家林淵、國際知名的超扁平藝術家村上隆、臺灣彩繪雕塑家洪易、以及當代新玩具雕塑代表Kaws
+          等，都受到許多收藏家的喜愛，同時也是當代藝術史上重要的一員。在這個展區，向藏家借展的作品都是一時之選，也反映出街頭藝術發展的某一種共性。另外，在與時尚跨界的藝術表現上，有永遠嘲諷時尚卻很時尚的藝術家Death
+          NYC、臺灣新銳服裝設計師吳日云、尋找鎂光燈背後那真實藝術家身分的郭彥甫、年輕雕塑家賴冠仲、橫跨藝術與時尚設計師雙重身分的雙人組陳薇與李崇德、創造出療癒角色俊寶Zunbo
+          的韓國設計團隊Sakubo，以及日本藝術家喜久田尚美、南館麻美子等。展區透過空間的裝置與時尚語彙，完美詮釋了藝術、設計與潮流文化的多元樣貌。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row" data-aos="flip-right" data-aos-duration="500">
+      <h2 class="text-2xl fw-bold pt-6 pt-md-14">猜你也喜歡...</h2>
+      <div class="col-12 col-lg-11 offset-lg-1">
+        <div class="row">
+          <!-- Swiper -->
+          <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+              <div
+                class="
+                  swiper-slide
+                  col-12 col-md-6 col-lg-4
+                  d-flex
+                  flex-column
+                  align-items-start
+                "
+              >
+                <a href="detail.html">
+                  <div class="card border-0">
+                    <img
+                      src="./assets/images/ricardo-gomez-angel-WxpnuLzqZN4-unsplash.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body p-0">
+                      <h4 class="text-m text-dark fw-bold mt-1">
+                        No.22 線上設計展
+                      </h4>
+                      <h5 class="text-m text-dark mt-1">$350</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="
+                  swiper-slide
+                  col-12 col-md-6 col-lg-4
+                  d-flex
+                  flex-column
+                  align-items-start
+                "
+              >
+                <a href="detail.html">
+                  <div class="card border-0">
+                    <img
+                      src="./assets/images/petri-heiskanen-bR9gFJqAnzA-unsplash.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body p-0">
+                      <h4 class="text-m text-dark fw-bold mt-1">
+                        No.22 線上設計展
+                      </h4>
+                      <h5 class="text-m text-dark mt-1">$350</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="
+                  swiper-slide
+                  col-12 col-md-6 col-lg-4
+                  d-flex
+                  flex-column
+                  align-items-start
+                "
+              >
+                <a href="detail.html">
+                  <div class="card border-0">
+                    <img
+                      src="./assets/images/museums-victoria-kiDwVL_5ZBY-unsplash.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body p-0">
+                      <h4 class="text-m text-dark fw-bold mt-1">
+                        No.22 線上設計展
+                      </h4>
+                      <h5 class="text-m text-dark mt-1">$350</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="
+                  swiper-slide
+                  col-12 col-md-6 col-lg-4
+                  d-flex
+                  flex-column
+                  align-items-start
+                "
+              >
+                <a href="detail.html">
+                  <div class="card border-0">
+                    <img
+                      src="./assets/images/ricardo-gomez-angel-WxpnuLzqZN4-unsplash.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body p-0">
+                      <h4 class="text-m text-dark fw-bold mt-1">
+                        No.22 線上設計展
+                      </h4>
+                      <h5 class="text-m text-dark mt-1">$350</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="
+                  swiper-slide
+                  col-12 col-md-6 col-lg-4
+                  d-flex
+                  flex-column
+                  align-items-start
+                "
+              >
+                <a href="detail.html">
+                  <div class="card border-0">
+                    <img
+                      src="./assets/images/petri-heiskanen-bR9gFJqAnzA-unsplash.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body p-0">
+                      <h4 class="text-m text-dark fw-bold mt-1">
+                        No.22 線上設計展
+                      </h4>
+                      <h5 class="text-m text-dark mt-1">$350</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="
+                  swiper-slide
+                  col-12 col-md-6 col-lg-4
+                  d-flex
+                  flex-column
+                  align-items-start
+                "
+              >
+                <a href="detail.html">
+                  <div class="card border-0">
+                    <img
+                      src="./assets/images/museums-victoria-kiDwVL_5ZBY-unsplash.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body p-0">
+                      <h4 class="text-m text-dark fw-bold mt-1">
+                        No.22 線上設計展
+                      </h4>
+                      <h5 class="text-m text-dark mt-1">$350</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="bg-news d-flex align-items-end mt-6 mt-md-13">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 col-lg-4">
+          <h2 class="text-sm-lg text-xl text-light fw-bold mb-5 mb-md-3">
+            想收到最新消息嗎？<br />快訂閱我們！
+          </h2>
+          <div class="input-group mb-8">
+            <input
+              type="email"
+              class="
+                form-control form-control-lg
+                border border-primary
+                text-base
+                py-3
+              "
+              placeholder="輸入您的電子信箱"
+              aria-label="Your email address"
+              aria-describedby="button-addon2"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-warning btn-lg text-base px-12 py-3"
+                type="button"
+                id="button-addon2"
+              >
+                訂閱
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <footer class="footer ">
+        <div class="container">
+          <div class="row">
+            <div class="d-flex justify-content-between py-4 py-md-7">
+              <div class="d-md-flex align-items-center">
+                <h5 class="text-md-l text-lg me-4">EXHIBINECTION</h5>
+                <p class="text-base mb-0">© 2020. All Rights Reserved.</p>
+              </div>
+              <ul class="d-flex list-unstyled">
+                <li class="d-none d-md-block">
+                  <a href="#" class="text-base text-primary fw-bold me-3" data-bs-toggle="modal"
+                    data-bs-target="#logInModal">Sign in</a>
+                </li>
+                <li class="d-none d-md-block">
+                  <a href="#" class="text-base text-primary fw-bold" data-bs-toggle="modal"
+                    data-bs-target="#logUpModal">Sign up</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+
+  <!-- 返回頁面最上面按鈕 -->
+  <a href="#nav" class="scrollTopBtn zindex2">
+    <i class="fas fa-angle-up fa-2x"></i>
+  </a>
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
