@@ -1,0 +1,49 @@
+// detail-page
+.detail-list {
+  li {
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+    a {
+      // padding: 16px 16px;
+      white-space: nowrap;
+      position: relative;
+      display: block;
+      /*製作滑到a連結後，出現底線的動畫*/
+      &:hover:after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        height: 0;
+        border-bottom: 2px solid $warning;
+      }
+      &:hover:after {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+  .detail-active {
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -3px;
+      height: 0;
+      border-bottom: 2px solid $warning;
+    }
+  }
+}
+
+// checkout-page
+.checkout-list {
+  img {
+    @include size(160px, 84px);
+  }
+  .checkout-num {
+    img {
+      @include size(24px, 24px);
+    }
+  }
+}

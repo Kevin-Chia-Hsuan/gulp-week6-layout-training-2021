@@ -1,0 +1,26 @@
+// index頁
+.show-card-list {
+  .card-img-top {
+    height: 350px;
+    object-fit: cover;
+  }
+  .card-info {
+    width: 65%;
+    @include pad {
+      width: 100%;
+    }
+  }
+  .card-time {
+    width: 40px;
+  }
+}
+.bg-live {
+  .card-img-top {
+    width: 128px;
+    object-fit: cover;
+  }
+}
+// detail頁
+.card-time-detail {
+  width: 40px;
+}

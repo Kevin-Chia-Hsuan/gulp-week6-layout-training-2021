@@ -1,0 +1,21 @@
+// md以上寬度25%、顏色
+@include media-breakpoint-up(md) {
+  .w-md-25 {
+    width: 25%;
+  }
+  .text-md-primary {
+    color: $primary !important;
+  }
+  .border-md-end {
+    border-right: 1px solid $dark;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .w-sm-50 {
+    width: 50%;
+  }
+}
+//防止載入AOS動畫後，RWD出現破板問題
+.over-x {
+  overflow-x: hidden;
+}
